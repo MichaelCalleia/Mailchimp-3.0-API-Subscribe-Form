@@ -1,7 +1,7 @@
 # Mailchimp-3.0-API-Subscribe-Form
 Form with jQuery validation to subscribe new list members to a Mailchimp list using the Mailchimp 3.0 API. Includes checking for member status, as well as handling various member status results and errors.
 
-## The files provided include:
+## The files provided include
 * HTML and JS for the form
 * PHP that powers most of the heavy lifting
 * A sample CSS file
