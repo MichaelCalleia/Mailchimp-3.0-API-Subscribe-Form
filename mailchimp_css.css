@@ -1,0 +1,185 @@
+
+/* Typography */
+
+html { 	-webkit-font-smoothing: antialiased; }
+
+body, button, input, select, textarea, p, a, h1, h2,small {
+	color:#222;
+	font-family:"Helvetica Neue", Helvetica, Swiss, Arial, SunSans-Regular, sans-serif;
+	font-size:14px;
+	font-size:1.4rem;
+	line-height:20px;
+	line-height:2rem;
+	margin:0 0 10px;
+	padding:0;
+	letter-spacing:.05rem;
+}
+
+h1, h2 {
+	font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Swiss, Arial, SunSans-Regular, sans-serif;
+	font-weight:300;
+	color:#666;
+	font-size:24px;
+	font-size:2.4rem;
+	line-height:24px;
+	line-height:2.4rem;
+	padding:10px 0;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+small, small a {
+	font-size:10px;
+	font-size:1rem;
+	line-height:normal;
+	padding:10px 0 20px;
+	color:#888;
+}
+
+/* wrappers and containers */
+
+.basicbox {
+	clear:both;
+	width:70%;
+	margin: 20px auto
+}
+
+/* Forms */
+
+fieldset {
+	margin:20px 0;
+	border:0;
+	width:100%;
+	text-align:left;
+}
+button,
+input,
+select,
+textarea {
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	font-size:14px;
+	font-size:1.4rem;
+	display: -moz-inline-stack;
+	display:inline-block;
+	margin:15px 0 0;
+	padding:5px 15px;
+	border:1px solid #f00;
+	color:#f00;
+	background:#fff;
+	cursor: pointer; Improves usability and consistency of cursor style between image-type 'input' and others	-webkit-appearance: button; Corrects inability to style clickable 'input' types in iOS	font-size: 12px;
+	-webkit-appearance: none;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+button:active {
+	margin:15px 0 0;
+	padding:5px 15px;
+	border:1px solid #f00;
+	color:#fff;
+	background:#f00;
+	text-decoration:none;
+	cursor:pointer;
+}
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: #aaa #bbb #bbb #bbb;
+	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+input[type="checkbox"],
+input[type="radio"] {
+	padding: 0; /* Addresses excess padding in IE8/9 */
+}
+input[type="search"] {
+	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	-moz-box-sizing:    content-box;
+	box-sizing:         content-box;
+}
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+	padding: 0;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+	color: #111;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+	padding: 3px;
+}
+
+input[type="text"], input[type="url"], input[type="email"], input[type="tel"], textarea {
+	margin:1px 0 1em;
+	padding:6px;
+	width:100%;
+	font-family:arial, sans-serif;
+	font-size:12px;
+	border:1px solid #999;
+	background:-webkit-gradient(linear, left top, left 15, from(#fff), color-stop(4%, #f4f4f4), to(#fff));
+	background:-moz-linear-gradient(top, #fff, #f4f4f4 1px, #fff 15px);
+}
+
+#newsletter input[type="email"] {
+	width:100%;
+	max-width:306.67px;
+}
+
+label {
+	display:block;
+	margin:2rem 0 1rem;
+	padding:0;
+	line-height:1rem;
+}
+
+label.error {
+	width:100%;
+	margin:3px 0 0;
+	display:block;
+	color:#cc0000;
+	font-size:10px;
+	font-size:1rem;
+	text-align:left;
+}
+
+form .placeholder {
+	color:#999;
+}
