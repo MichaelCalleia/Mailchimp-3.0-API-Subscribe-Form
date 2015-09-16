@@ -41,7 +41,4 @@
     $json_data = json_decode(utf8_encode($json_data));
     $user_status = $json_data->status;
 
-    echo 'User status is now: '.$user_status;
-    echo '<br><br>';
-
    ?>
