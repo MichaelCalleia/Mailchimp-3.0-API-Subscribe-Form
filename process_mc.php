@@ -3,31 +3,8 @@
 // Get settings //
     include 'process_mc_settings.php';
 
-
-    // Email cleamup and member ID (leid) //
-
-      // Take email address from the form
-      $email = "strip_tags($_POST['email'])";
-
-      // Make email all lowercase
-      $email = strtolower($email);
-
-      // member ID, is email covert to md5
-      $leid = md5($email);
-
-    //  Take email first and last name from the form
-    if (isset($_POST['fname']))
-    {
-      $fname = strip_tags($_POST['fname']);
-    }
-    if (isset($_POST['lname']))
-    {
-      $lname = strip_tags($_POST['lname']);
-    }
-
-
   // Get status from Mailchimp //
-  include 'process_mc_getstatus.php';
+    include 'process_mc_getstatus.php';
 
 
   // Now let's do something about the status //
@@ -51,21 +28,35 @@
          echo 'You are already a member. Thank you.';
      // IF unsubscribed, resubscribe them
        } elseif ($user_status== 'unsubscribed') {
-         echo 'You unsubscribed from this newletter in the past. I will fix that right up for you now.';
-         echo '<br><br>';
+        //  echo 'You unsubscribed from this newletter in the past. I will fix that right up for you now.';
+        //  echo '<br><br>';
          include 'process_mc_patch.php';
-         echo 'All done, you are now subscribed. Thank you.';
+        //  echo 'All done, you are now subscribed. Thank you.';
+         echo 'You are now subscribed. Thank you.';
      // IF pending, set to subscribed
        } elseif ($user_status== 'pending') {
-         echo 'You are already a member, but you never clicked your confirmation email. I will fix that right up for you now.';
-         echo '<br><br>';
+        //  echo 'You are already a member, but you never clicked your confirmation email. I will fix that right up for you now.';
+        //  echo '<br><br>';
          include 'process_mc_patch.php';
-         echo 'All done, you are now subscribed. Thank you.';
+        //  echo 'All done, you are now subscribed. Thank you.';
+        echo 'You are now subscribed. Thank you.';
      // IF cleaned, let the user know this email address is not valid —— let them sign up again?
        } elseif ($user_status== 'cleaned') {
-         echo '<br><br>';
+        //  echo '<br><br>';
          echo 'This email address was signed up before, but something is wrong. Email sent to this address keeps bouncing, please check your spelling or provide a differnt email address.';
    // That's all the ifs thans and elses—close it down!
        }
+
+
+       // Send the data back to the JS
+       echo json_encode($user_message);
+
+
+
+       // Let's prove this php script was hit and the JS passes data to it
+       // Send New Newsletter Subscriber Message
+         mail( "$admin_email", "New Newsletter Subscriber",
+         "Newsletter sign up for: $fname $lname \nEmail: $email\n\n\nStatus: $user_status\n\nWere there any errors: $is_error",
+         "From: Forms <$admin_email>" );
 
    ?>

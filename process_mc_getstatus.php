@@ -1,6 +1,6 @@
 <?php
 
-  // Get status from Mailchimp //
+// Get status from Mailchimp //
 
     // MailChimp API 3.0 URL for member status //
     // /3.0/lists/{$listid}/members/{$leid}
@@ -28,7 +28,9 @@
     $json_data = json_decode(utf8_encode($json_data));
     $user_status = $json_data->status;
 
-    echo 'User status is: '.$user_status;
-    echo '<br><br>';
+    // echo json_encode($user_status);
+    //
+    //     echo 'User status is: '.$user_status;
+    //     echo '<br><br>';
 
-   ?>
+?>

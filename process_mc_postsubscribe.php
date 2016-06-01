@@ -1,6 +1,8 @@
 <?php
 
-  // Signup new member to Mailchimp newsletter //
+    include 'process_mc_settings.php';
+
+// Signup new member to Mailchimp newsletter //
 
   // create JSON data for the chimp //
     $data = array(
@@ -41,7 +43,6 @@
     $json_data = json_decode(utf8_encode($json_data));
     $user_status = $json_data->status;
 
-    echo 'User status is now: '.$user_status;
-    echo '<br><br>';
+    // echo json_encode($user_status);
 
    ?>

@@ -1,6 +1,8 @@
 <?php
 
-  // Patch status on Mailchimp //
+    include 'process_mc_settings.php';
+
+// Patch status on Mailchimp //
 
       // MailChimp API 3.0 URL for patch/change member status //
       // /3.0/lists/{$listid}/members/{$leid}
@@ -31,7 +33,6 @@
     $json_data = json_decode(utf8_encode($json_data));
     $user_status = $json_data->status;
 
-    echo 'User status is now: '.$user_status;
-    echo '<br><br>';
+    // echo json_encode($user_status);
 
    ?>
