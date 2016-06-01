@@ -26,6 +26,4 @@ That's about it.
 * How to get a Mailchimp API Key http://kb.mailchimp.com/accounts/management/about-api-keys
 
 ## What's next?
-Right now all status changes happen via PHP without AJAX, so feedback to the user is a bit lacking at this time. Working on adding AJAX callbacks now.
-
-
+If you would like extend this script, create a Wordpress or Drupal plugin—go for it!
