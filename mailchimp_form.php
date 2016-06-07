@@ -20,13 +20,13 @@
 			<h2>Sign Up for Our Newsletter</h2>
 			<!-- Begin MailChimp Signup Form -->
 			<div id="newsletter-form">
-				<form id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" method="post" action="#" target="_blank">
+				<form id="mc-subscribe-form" name="mc-subscribe-form" class="validate" method="post" action="#" target="_blank">
 					<fieldset id="mc_embed_signup">
 						<p><input type="text" name="fname" class="required" placeholder="First name" required></p>
 						<p><input type="text" name="lname" class="required" placeholder="Last name" required></p>
 						<p><input type="email" name="email" class="required email" placeholder="Your email address" required></p>
 
-						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-subscribe" class="button"></div>
 					</fieldset>
 				</form>
 			</div>
@@ -43,7 +43,7 @@
 			<!--  validate contact form-->
 			<script>
 			jQuery(function() {
-				jQuery('#mc-embedded-subscribe-form').validate({
+				jQuery('#mc-subscribe-form').validate({
 					rules: {
 							fname: {
 								required: true,
@@ -74,7 +74,7 @@
 
 					// jquery form for submitting
 					submitHandler: function(form) {
-						jQuery('#mc-embedded-subscribe-form').hide();
+						jQuery('#mc-subscribe-form').hide();
 						jQuery('#newsletter-form').append("<p class='inprogress'>Working on that for you.</p>");
 
 						jQuery(form).ajaxSubmit({
@@ -88,7 +88,7 @@
 
 							error: function() {
 								jQuery('.inprogress').hide();
-								jQuery('#mc-embedded-subscribe-form').show();
+								jQuery('#mc-subscribe-form').show();
 								jQuery('#newsletter-form').append("<label class='error'>Oh my! Something is not working. Please try using <a href='http://eepurl.com/d5Nhb'>this Mail Chimp form.</a></label>");
 								window.open('http://eepurl.com/d5Nhb', '_blank');
 							}
