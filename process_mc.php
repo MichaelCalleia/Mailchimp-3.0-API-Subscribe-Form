@@ -15,8 +15,8 @@
      // IF 404, add new user as pending
         if ($user_status == 404) {
          // code to be executed if condition is true;
-         echo 'Adding you right now.';
-         echo '<br><br>';
+        //  echo 'Adding you right now.';
+        //  echo '<br><br>';
          include 'process_mc_postsubscribe.php';
          include 'process_mc_errorcheck.php';
          if ($is_error != "yes") {

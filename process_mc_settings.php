@@ -47,14 +47,14 @@
       {
         $lname = strip_tags($_POST['lname']);
       }else {
-        $lname = "";
+        $lname = '';
       }
 
 // Set Error Flag to no
-      $is_error = "no";
+      $is_error = 'no';
 
 // Initalize status variables
-      $user_message = "";
-      $user_status = "";
+      $user_message = '';
+      $user_status = '';
 
 ?>

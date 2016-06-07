@@ -80,9 +80,9 @@
 						jQuery(form).ajaxSubmit({
 							url: '/mc_ajax2/process_mc.php',
 
-							success: function(responseText, statusText, xhr, $user_message) {
+							success: function(user_message, statusText, xhr, $user_message) {
+								var responseText= user_message.replace(/\"/g, "");
 								jQuery('.inprogress').hide();
-								// jQuery('#newsletter-form').append(responseText);
 								jQuery('#newsletter-form').append("<p class='thanks'>" + responseText + "</p>");
 							},
 
