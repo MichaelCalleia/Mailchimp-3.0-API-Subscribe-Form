@@ -53,7 +53,8 @@
 // Set Error Flag to no
       $is_error = "no";
 
-// Initalize $user_message
+// Initalize status variables
       $user_message = "";
+      $user_status = "";
 
 ?>
