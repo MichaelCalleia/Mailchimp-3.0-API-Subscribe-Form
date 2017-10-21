@@ -78,7 +78,7 @@
 						jQuery('#newsletter-form').append("<p class='inprogress'>Working on that for you.</p>");
 
 						jQuery(form).ajaxSubmit({
-							url: '/mc_ajax2/process_mc.php',
+							url: 'process_mc.php',
 
 							success: function(user_message, statusText, xhr, $user_message) {
 								var responseText= user_message.replace(/\"/g, "");
